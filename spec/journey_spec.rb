@@ -14,6 +14,8 @@ describe Journey do
     end
 
     it 'reduces the balance by the MINIMUM_FARE when #touch_out' do
+      card.top_up(10)
+      journey.touch_in(paddington)
       expect{ journey.touch_out(victoria) }.to change{ card.balance }.by -Journey::MINIMUM_FARE
     end
 
