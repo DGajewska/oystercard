@@ -1,4 +1,4 @@
-require 'station'
+ require 'station'
 
 describe Station do
   let(:station) { Station.new("Barbican", 1) }
